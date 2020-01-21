@@ -1,4 +1,6 @@
 FROM alpine:3.10.3
+MAINTAINER Mayank Pundir <mayank.pundir@razorpay.com>
+LABEL Description="Use certbot-dns-route53 plugin to issue TLS certs in a jiffy"
 
 RUN ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime
 RUN echo "http://dl-3.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories
