@@ -1,4 +1,4 @@
-FROM alpine:3.11.3
+FROM alpine:3.13.4
 MAINTAINER Mayank Pundir <mayank.pundir@razorpay.com>
 LABEL Description="Use certbot-dns-route53 plugin to issue TLS certs in a jiffy"
 
@@ -17,6 +17,7 @@ RUN apk add --no-cache \
     musl-dev \
     groff \
     less \
+    cargo \
     gcc \
     git
 
