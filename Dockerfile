@@ -18,8 +18,7 @@ RUN apk add --no-cache \
     groff \
     less \
     cargo \
-    gcc \
-    git
+    gcc
 
 ENV PYTHONUNBUFFERED=1
 
@@ -34,9 +33,6 @@ RUN echo "**** install Python ****" && \
     if [ ! -e /usr/bin/pip ]; then ln -s pip3 /usr/bin/pip ; fi
 
 RUN pip install certbot \
-    && cd /opt \
-    && git clone https://github.com/certbot/certbot \
-    && cd certbot/certbot-dns-route53 \
-    && pip install .
+    certbot-dns-route53
 
 ENTRYPOINT ["/bin/bash"]
